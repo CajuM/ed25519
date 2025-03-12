@@ -10,14 +10,14 @@
 
     #if defined(__WATCOMC__) && __WATCOMC__ >= 1250 && !defined(UINT64_C)
         #include <limits.h>
-        #define UINT64_C(x) (x + (UINT64_MAX - UINT64_MAX))
     #endif
 #endif
 
+#define UINT64_C(x) (x + (UINT64_MAX - UINT64_MAX))
 
 #ifndef FIXEDINT_H_INCLUDED
     #define FIXEDINT_H_INCLUDED
-    
+
     #include <limits.h>
 
     /* (u)int32_t */
